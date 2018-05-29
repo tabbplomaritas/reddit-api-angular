@@ -1,0 +1,28 @@
+h1{
+  font-family: monospace;
+  text-align: center;
+  font-size: 3rem;
+  color: coral;
+  text-shadow: 1px 1px 2px black;
+}
+
+div{
+  margin: 1rem;
+  background-color: coral;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 2rem;
+  font-family: monospace;
+  color: white;
+}
+
+img {
+  margin-top: 2rem;
+  box-shadow: 1px 1px 5px black;
+}
+
+a {
+color: rgb(185, 26, 100);
+font-size: 1.2rem;
+}
