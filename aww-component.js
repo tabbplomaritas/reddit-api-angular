@@ -6,7 +6,7 @@ const awwComponent = {
   
   <input ng-model="$ctrl.search" placeholder="search this reddit">
 
-  <div ng-repeat="child in $ctrl.showResponse.data.data.children "> 
+  <div ng-repeat="child in $ctrl.posts.data.data.children "> 
     <p>{{ child.data.title }}
       <br>
       <img src='{{ child.data.thumbnail }}'>
@@ -20,14 +20,11 @@ const awwComponent = {
   `,
 
   controller: ["DisplayData", function(DisplayData){
-
     const vm = this;
-    DisplayData.getData().then((response) => {
+    DisplayData.getPosts().then((response) => {
       console.log(response);
-      vm.showResponse = response;
-    })
-
-
+      vm.posts = response;
+    });
   }]
 
 

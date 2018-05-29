@@ -1,29 +1,26 @@
 "use strict";
 
 function DisplayData($http){
-  let finalData = {};
-  const getData = () =>{
+  const getPosts = () =>{
     return $http({
       method: 'GET',
       url: 'https://www.reddit.com/r/aww.json'
     }).then((response) =>{
-      finalData = response;
       return response;
     }, (error) => {
       console.log(error);
     });
   };
 
-  const returnResults = () => { return finalData; };
 
   return {
-    returnResults, 
-    getData
+    getPosts
   };
 
 };
 
-DisplayData.$inject = ["$http"];
+//do i actually need this $inject? My page works with or without this.
+// DisplayData.$inject = ["$http"];
 
 angular
   .module("app")
