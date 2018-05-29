@@ -14,14 +14,15 @@ function DisplayData($http){
     });
   };
 
-
   return {
     getPosts
   };
 
 };
 
-//do i actually need this $inject? My page works with or without this.
+//question: do i actually need this $inject? My page works with or without this.
+//answer: this is one way to inject, technically, but when you minifiy or concatenate you are at high risk for errors with the injected data.
+
 // DisplayData.$inject = ["$http"];
 
 angular
