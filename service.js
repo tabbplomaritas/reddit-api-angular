@@ -2,11 +2,13 @@
 
 function DisplayData($http){
   const getPosts = () =>{
+    let redditPosts = {};
     return $http({
       method: 'GET',
       url: 'https://www.reddit.com/r/aww.json'
     }).then((response) =>{
-      return response;
+      redditPosts = response;
+      return redditPosts;
     }, (error) => {
       console.log(error);
     });
